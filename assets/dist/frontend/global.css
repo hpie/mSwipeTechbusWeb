@@ -1,0 +1,298 @@
+.page_heading{
+    font-size: 35px;
+    font-weight: 500;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: capitalize;
+}
+.logout_btn{
+    background: #276afb;
+    color: #fff;
+    border-color: #38393e;
+}
+.footer {
+    z-index: -1!important;
+}
+.quick_link_btn{
+    background: #fff;
+    color:#000;
+    border: 0px;
+    padding: 12px 25px!important;
+}
+.quick_link_btn:hover{
+    color: #000!important;
+    background-color: #ffffffb3!important;
+}
+.primary_btn{
+    background: #276afb;
+    color: #fff;
+    border-color: #38393e;
+}
+
+
+.small_form_container{
+    max-width: 600px;
+    margin: auto;
+    background: #efefef;
+    padding: 16px 14px;
+    border-radius: 4px;
+}
+.edit_save_btn{
+    background: #efefef;
+    border: 1px solid #8c7171;
+    font-size: 13px;
+    color: #000;
+}
+
+/* file upload input with btn */
+
+
+.file-upload{
+    display:block;
+    text-align:center;
+    font-size: 12px;
+}
+ .file-upload .file-select{
+    display:block;
+    border: 2px solid #dce4ec;
+    color: #34495e;
+    cursor:pointer;
+    height:40px;
+    line-height:40px;
+    text-align:left;
+    background:#FFFFFF;
+    overflow:hidden;
+    position:relative;
+}
+ .file-upload .file-select .file-select-button{
+    background: #dce4ec;
+    padding: 0 10px;
+    display: inline-block;
+    height: 40px;
+    line-height: 32px;
+    font-size: x-large;
+}
+ .file-upload .file-select .file-select-name{
+    line-height:40px;
+    display:inline-block;
+    padding:0 10px;
+}
+ .file-upload .file-select:hover{
+    border-color:#34495e;
+    transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -webkit-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+}
+ .file-upload .file-select:hover .file-select-button{
+    background:#34495e;
+    color:#FFFFFF;
+    transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -webkit-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+}
+ .file-upload.active .file-select{
+    border-color:#3fa46a;
+    transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -webkit-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+}
+ .file-upload.active .file-select .file-select-button{
+    background:#3fa46a;
+    color:#FFFFFF;
+    transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -webkit-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+}
+ .file-upload .file-select input[type=file]{
+    z-index:100;
+    cursor:pointer;
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    opacity:0;
+    filter:alpha(opacity=0);
+}
+ .file-upload .file-select.file-select-disabled{
+    opacity:0.65;
+}
+ .file-upload .file-select.file-select-disabled:hover{
+    cursor:default;
+    display:block;
+    border: 2px solid #dce4ec;
+    color: #34495e;
+    cursor:pointer;
+    height:40px;
+    line-height:40px;
+    margin-top:5px;
+    text-align:left;
+    background:#FFFFFF;
+    overflow:hidden;
+    position:relative;
+}
+ .file-upload .file-select.file-select-disabled:hover .file-select-button{
+    background:#dce4ec;
+    color:#666666;
+    padding:0 10px;
+    display:inline-block;
+    height:40px;
+    line-height:40px;
+}
+ .file-upload .file-select.file-select-disabled:hover .file-select-name{
+    line-height:40px;
+    display:inline-block;
+    padding:0 10px;
+}
+
+/* cusom box shadow  */
+.box-shadow {
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 1px 2px 0 rgba(0,0,0,.1), 0 2px 20px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 1px 2px 0 rgba(0,0,0,.1), 0 2px 20px 0 rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 1px 2px 0 rgba(0,0,0,.1), 0 2px 20px 0 rgba(0,0,0,.2);
+}
+
+/* custom check box  btn  */
+.checkbox_custom{
+    display: inline-block;
+}
+.checkbox_custom label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.checkbox_custom label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox_custom .cr{
+    position: relative;
+    display: inline-block;
+    border: 2px solid #a9a9a9;
+    border-radius: 2px;
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-right: 7px;
+    background: #fff;
+}
+.checkbox_custom .cr .cr-icon {
+    position: absolute;
+    font-size: 10px;
+    line-height: 0;
+    top: 49%;
+    left: 0px;
+    color: #000000;
+}
+
+.checkbox_custom label input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox_custom label input[type="checkbox"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox_custom label input[type="checkbox"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox_custom label input[type="checkbox"]:disabled + .cr{
+    opacity: .5;
+}
+/* custom radion btn  */
+
+/* The custom radio */
+.main_custom_radio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 300px;
+    margin: auto;
+}
+.custom_radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 16px;
+  }
+  
+  /* Hide the browser's default radio button */
+  .custom_radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .custom_radio:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .custom_radio input:checked ~ .checkmark {
+    background-color:#fbbd00
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .custom_radio input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .custom_radio .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+@media only screen and(max-width:600px ){
+    .small_form_container{
+        max-width: 100%;
+        width: 100%;
+    }
+}
+@media only screen and (max-width:480px ){
+    .page_heading{
+        font-size: 27px;
+    }
+}

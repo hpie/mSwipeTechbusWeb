@@ -1,0 +1,1 @@
+{"user_id":"28","latitude":"31.0406509","longitude":"77.125836","location_time":"2019-03-30 20:42:56"},{"user_id":"28","latitude":"31.0406409","longitude":"77.1258325","location_time":"2019-03-30 20:43:56"},{"user_id":"28","latitude":"31.0406411","longitude":"77.1258327","location_time":"2019-03-30 20:44:56"}
