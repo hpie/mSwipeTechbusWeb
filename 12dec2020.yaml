@@ -1,0 +1,136 @@
+swagger: '2.0'
+info:
+  description: >-
+    This is a sample server Petstore server.  You can find out more about    
+    Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net,
+    #swagger](http://swagger.io/irc/).      For this sample, you can use the api
+    key `special-key` to test the authorization     filters.
+  version: 1.0.0
+  title: TechBus
+host: localhost
+basePath: /techbus/api/
+schemes:
+  - http
+# components:
+#   securitySchemes:
+#     bearerAuth:
+#       type: http
+#       scheme: bearer
+#     basicAuth:
+#       type: http
+#       scheme: basic
+paths:
+  /public/blog:
+    get:
+      tags:
+        - blog
+      summary: List Product
+      description: Returns a single pet
+      produces:
+        - application/json
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+      # security:
+      #   - bearerAuth: []
+  /login2:
+    post:
+      tags:
+        - login
+      summary: login
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+      parameters:
+        - name: imei
+          required: true
+          type: string
+          in: formData
+        - name: username
+          required: true
+          type: string
+          in: formData
+        - name: password
+          required: true
+          type: string
+          in: formData
+        - name: latitude
+          required: true
+          type: string
+          in: formData
+        - name: longitude
+          required: true
+          type: string
+          in: formData
+        - name: Authorization
+          type: string
+          in: header
+      responses:
+        '200':
+          description: 200 response
+          # schema:
+          #   $ref: '#/definitions/CardListJson'
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '400':
+          description: Bad Request
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '401':
+          description: Unauthorized
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '403':
+          description: Forbidden
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '404':
+          description: Not Found
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '429':
+          description: Too Many Requests
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '500':
+          description: Internal Server Error
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '504':
+          description: Gateway Timeout
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+      # security:
+      #   - basicAuth: []
+# definitions:
+#   CardListJson:
+#     type: object
+#     properties:
+#       total:
+#         type: integer
+#         format: int32
+#       lastRowVer:
+#         type: integer
+#         format: int64
+#       data:
+#         type: array
+#         items:
+#           type: object
+#           additionalProperties:
+#             $ref: '#/definitions/Object'
+#   Object:
+#     type: object

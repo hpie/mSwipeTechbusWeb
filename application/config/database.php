@@ -77,9 +77,9 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	
-	'username' => 's190217m_mytechbus',
-	'password' => 'x^B,wzY;X1On',
-	'database' => 's190217m_mytechbus',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'techbus',
 
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -96,3 +96,29 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+
+
+//$db['default'] = array(
+//	'dsn'	=> '',
+//	'hostname' => 'localhost',
+//	
+//	'username' => 's190217m_mytechbus',
+//	'password' => 'x^B,wzY;X1On',
+//	'database' => 's190217m_mytechbus',
+//
+//	'dbdriver' => 'mysqli',
+//	'dbprefix' => '',
+//	'pconnect' => FALSE,
+//	'db_debug' => (ENVIRONMENT !== 'production'),
+//	'cache_on' => FALSE,
+//	'cachedir' => '',
+//	'char_set' => 'utf8',
+//	'dbcollat' => 'utf8_general_ci',
+//	'swap_pre' => '',
+//	'encrypt' => FALSE,
+//	'compress' => FALSE,
+//	'stricton' => FALSE,
+//	'failover' => array(),
+//	'save_queries' => TRUE
+//);
