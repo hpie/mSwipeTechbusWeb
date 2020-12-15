@@ -1,0 +1,1125 @@
+swagger: '2.0'
+info:
+  description: "techbus api"
+  version: "1.0.0"
+  title: "Techbus"
+host: "localhost"
+basePath: "/techbus/api/"
+schemes:
+  - "http"
+# components:
+#   securitySchemes:
+#     bearerAuth:
+#       type: "http"
+#       scheme: "bearer"
+#     basicAuth:
+#       type: "http"
+#       scheme: "basic"
+paths:
+  /login2:
+    post:
+      tags:
+        - "login"
+      summary: "login"
+      consumes:
+        - "application/x-www-form-urlencoded"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "imei"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "username"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "password"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "latitude"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "longitude"
+          required: true
+          type: "string"
+          in: "formData"  
+          
+        # - name: "Authorization"
+        #   type: "string"
+        #   # value: Basic dGVzdGNsaWVudDp0ZXN0c2VjcmV0
+        #   in: "header"
+      responses:
+        '200':
+          description: 200 response
+          # schema:
+          #   $ref: '#/definitions/CardListJson'
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '400':
+          description: Bad Request
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '401':
+          description: Unauthorized
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '403':
+          description: Forbidden
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '404':
+          description: Not Found
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '429':
+          description: Too Many Requests
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '500':
+          description: Internal Server Error
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '504':
+          description: Gateway Timeout
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+      # security:
+      #   - basicAuth: []
+  /housekeeping:
+    post:
+      tags:
+        - "housekeeping"
+      summary: "housekeeping"
+      consumes:
+        - "application/x-www-form-urlencoded"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "imei"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "user_id"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "latitude"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "longitude"
+          required: true
+          type: "string"
+          in: "formData"  
+          
+        # - name: "Authorization"
+        #   type: "string"
+        #   # value: Basic dGVzdGNsaWVudDp0ZXN0c2VjcmV0
+        #   in: "header"
+      responses:
+        '200':
+          description: 200 response
+          # schema:
+          #   $ref: '#/definitions/CardListJson'
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '400':
+          description: Bad Request
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '401':
+          description: Unauthorized
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '403':
+          description: Forbidden
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '404':
+          description: Not Found
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '429':
+          description: Too Many Requests
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '500':
+          description: Internal Server Error
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '504':
+          description: Gateway Timeout
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+      # security:
+      #   - basicAuth: []    
+  /update_route:
+    post:
+      tags:
+        - "update route"
+      summary: "update route"
+      consumes:
+        - "application/x-www-form-urlencoded"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "imei"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "user_id"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "latitude"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "longitude"
+          required: true
+          type: "string"
+          in: "formData"  
+        - name: "selected_route"
+          required: true
+          type: "string"
+          in: "formData"    
+          
+        # - name: "Authorization"
+        #   type: "string"
+        #   # value: Basic dGVzdGNsaWVudDp0ZXN0c2VjcmV0
+        #   in: "header"
+      responses:
+        '200':
+          description: 200 response
+          # schema:
+          #   $ref: '#/definitions/CardListJson'
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '400':
+          description: Bad Request
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '401':
+          description: Unauthorized
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '403':
+          description: Forbidden
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '404':
+          description: Not Found
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '429':
+          description: Too Many Requests
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '500':
+          description: Internal Server Error
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '504':
+          description: Gateway Timeout
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+      # security:
+      #   - basicAuth: []        
+  /position_log:
+    post:
+      tags:
+        - "position log"
+      summary: "position log"
+      consumes:
+        - "application/x-www-form-urlencoded"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "vehicle_code"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "user_id"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "username"
+          required: true
+          type: "string"
+          in: "formData"      
+        - name: "device_imie"
+          required: true
+          type: "string"
+          in: "formData"  
+        - name: "route_code"
+          required: true
+          type: "string"
+          in: "formData"    
+        - name: "conductor_code"
+          required: true
+          type: "string"
+          in: "formData"  
+        - name: "latitude"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "longitude"
+          required: true
+          type: "string"
+          in: "formData"  
+        
+        - name: "altitude"
+          required: true
+          type: "string"
+          in: "formData" 
+        - name: "altutude_accuracy"
+          required: true
+          type: "string"
+          in: "formData" 
+        - name: "heading"
+          required: true
+          type: "string"
+          in: "formData" 
+        - name: "speed"
+          required: true
+          type: "string"
+          in: "formData" 
+        - name: "timestamp"
+          required: true
+          type: "string"
+          in: "formData" 
+          
+          
+        # - name: "Authorization"
+        #   type: "string"
+        #   # value: Basic dGVzdGNsaWVudDp0ZXN0c2VjcmV0
+        #   in: "header"
+      responses:
+        '200':
+          description: 200 response
+          # schema:
+          #   $ref: '#/definitions/CardListJson'
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '400':
+          description: Bad Request
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '401':
+          description: Unauthorized
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '403':
+          description: Forbidden
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '404':
+          description: Not Found
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '429':
+          description: Too Many Requests
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '500':
+          description: Internal Server Error
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '504':
+          description: Gateway Timeout
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+      # security:
+      #   - basicAuth: []            
+  /book_ticket_call:
+    post:
+      tags:
+        - "book ticket call"
+      summary: "book ticket call"
+      consumes:
+        - "application/x-www-form-urlencoded"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "ticket_data"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "latitude"
+          required: true
+          type: "string"
+          in: "formData"
+        - name: "longitude"
+          required: true
+          type: "string"
+          in: "formData"  
+        - name: "user_id"
+          required: true
+          type: "string"
+          in: "formData"
+          
+          
+        # - name: "Authorization"
+        #   type: "string"
+        #   # value: Basic dGVzdGNsaWVudDp0ZXN0c2VjcmV0
+        #   in: "header"
+      responses:
+        '200':
+          description: 200 response
+          # schema:
+          #   $ref: '#/definitions/CardListJson'
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '400':
+          description: Bad Request
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '401':
+          description: Unauthorized
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '403':
+          description: Forbidden
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '404':
+          description: Not Found
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '429':
+          description: Too Many Requests
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '500':
+          description: Internal Server Error
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+        '504':
+          description: Gateway Timeout
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+      # security:
+      #   - basicAuth: []                
+  # /upload_logs:
+  #   post:
+  #     tags:
+  #       - "upload logs"
+  #     summary: "upload logs"
+  #     consumes:
+  #       - "application/x-www-form-urlencoded"
+  #     produces:
+  #       - "application/json"
+  #     parameters:
+  #       - name: "latitude"
+  #         required: true
+  #         type: "string"
+  #         in: "formData"
+  #       - name: "longitude"
+  #         required: true
+  #         type: "string"
+  #         in: "formData"  
+  #       - name: "user_id"
+  #         required: true
+  #         type: "string"
+  #         in: "formData"
+          
+          
+  #       # - name: "Authorization"
+  #       #   type: "string"
+  #       #   # value: Basic dGVzdGNsaWVudDp0ZXN0c2VjcmV0
+  #       #   in: "header"
+  #     responses:
+  #       '200':
+  #         description: 200 response
+  #         # schema:
+  #         #   $ref: '#/definitions/CardListJson'
+  #         headers:
+  #           Access-Control-Allow-Origin:
+  #             type: string
+  #       '400':
+  #         description: Bad Request
+  #         headers:
+  #           Access-Control-Allow-Origin:
+  #             type: string
+  #       '401':
+  #         description: Unauthorized
+  #         headers:
+  #           Access-Control-Allow-Origin:
+  #             type: string
+  #       '403':
+  #         description: Forbidden
+  #         headers:
+  #           Access-Control-Allow-Origin:
+  #             type: string
+  #       '404':
+  #         description: Not Found
+  #         headers:
+  #           Access-Control-Allow-Origin:
+  #             type: string
+  #       '429':
+  #         description: Too Many Requests
+  #         headers:
+  #           Access-Control-Allow-Origin:
+  #             type: string
+  #       '500':
+  #         description: Internal Server Error
+  #         headers:
+  #           Access-Control-Allow-Origin:
+  #             type: string
+  #       '504':
+  #         description: Gateway Timeout
+  #         headers:
+  #           Access-Control-Allow-Origin:
+  #             type: string
+  #     # security:
+  #     #   - basicAuth: []                    
+  /update_imei:
+    get:
+        tags:
+          - "update imei"
+        summary: "List Product"
+        description: ""
+        produces:
+          - "application/json"
+        responses:
+          '200':
+            description: 200 response
+            # schema:
+            #   $ref: '#/definitions/CardListJson'
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '400':
+            description: Bad Request
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '401':
+            description: Unauthorized
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '403':
+            description: Forbidden
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '404':
+            description: Not Found
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '429':
+            description: Too Many Requests
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '500':
+            description: Internal Server Error
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '504':
+            description: Gateway Timeout
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+        # security:
+        #   - bearerAuth: []
+  /data:
+    get:
+        tags:
+          - "data"
+        summary: "data"
+        description: ""
+        produces:
+          - "application/json"
+        parameters:
+          - name: "table"
+            in: "query"
+            required: true
+            type: "string"
+        responses:
+          '200':
+            description: 200 response
+            # schema:
+            #   $ref: '#/definitions/CardListJson'
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '400':
+            description: Bad Request
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '401':
+            description: Unauthorized
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '403':
+            description: Forbidden
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '404':
+            description: Not Found
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '429':
+            description: Too Many Requests
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '500':
+            description: Internal Server Error
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '504':
+            description: Gateway Timeout
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+        # security:
+        #   - bearerAuth: []
+  /:
+    get:
+        tags:
+          - "welcome"
+        summary: "welcome"
+        description: ""
+        produces:
+          - "application/json"
+        responses:
+          '200':
+            description: 200 response
+            # schema:
+            #   $ref: '#/definitions/CardListJson'
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '400':
+            description: Bad Request
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '401':
+            description: Unauthorized
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '403':
+            description: Forbidden
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '404':
+            description: Not Found
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '429':
+            description: Too Many Requests
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '500':
+            description: Internal Server Error
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '504':
+            description: Gateway Timeout
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+        # security:
+        #   - bearerAuth: []        
+  /routes:
+    get:
+        tags:
+          - "routes"
+        summary: "routes"
+        description: ""
+        produces:
+          - "application/json"
+        responses:
+          '200':
+            description: 200 response
+            # schema:
+            #   $ref: '#/definitions/CardListJson'
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '400':
+            description: Bad Request
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '401':
+            description: Unauthorized
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '403':
+            description: Forbidden
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '404':
+            description: Not Found
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '429':
+            description: Too Many Requests
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '500':
+            description: Internal Server Error
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '504':
+            description: Gateway Timeout
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+        # security:
+        #   - bearerAuth: []                
+  /bookings:
+    get:
+        tags:
+          - "bookings"
+        summary: "bookings"
+        description: ""
+        produces:
+          - "application/json"
+        responses:
+          '200':
+            description: 200 response
+            # schema:
+            #   $ref: '#/definitions/CardListJson'
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '400':
+            description: Bad Request
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '401':
+            description: Unauthorized
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '403':
+            description: Forbidden
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '404':
+            description: Not Found
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '429':
+            description: Too Many Requests
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '500':
+            description: Internal Server Error
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '504':
+            description: Gateway Timeout
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+        # security:
+        #   - bearerAuth: []                      
+  /attempts:
+    get:
+        tags:
+          - "get attempts"
+        summary: "get attempts"
+        description: ""
+        produces:
+          - "application/json"
+        responses:
+          '200':
+            description: 200 response
+            # schema:
+            #   $ref: '#/definitions/CardListJson'
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '400':
+            description: Bad Request
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '401':
+            description: Unauthorized
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '403':
+            description: Forbidden
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '404':
+            description: Not Found
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '429':
+            description: Too Many Requests
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '500':
+            description: Internal Server Error
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '504':
+            description: Gateway Timeout
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+        # security:
+        #   - bearerAuth: []                            
+  /types:
+    get:
+        tags:
+          - "get types"
+        summary: "get types"
+        description: ""
+        produces:
+          - "application/json"
+        responses:
+          '200':
+            description: 200 response
+            # schema:
+            #   $ref: '#/definitions/CardListJson'
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '400':
+            description: Bad Request
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '401':
+            description: Unauthorized
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '403':
+            description: Forbidden
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '404':
+            description: Not Found
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '429':
+            description: Too Many Requests
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '500':
+            description: Internal Server Error
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '504':
+            description: Gateway Timeout
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+        # security:
+        #   - bearerAuth: []                                  
+  /device_access:
+    get:
+        tags:
+          - "device access"
+        summary: "device access"
+        description: ""
+        produces:
+          - "application/json"
+        responses:
+          '200':
+            description: 200 response
+            # schema:
+            #   $ref: '#/definitions/CardListJson'
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '400':
+            description: Bad Request
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '401':
+            description: Unauthorized
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '403':
+            description: Forbidden
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '404':
+            description: Not Found
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '429':
+            description: Too Many Requests
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '500':
+            description: Internal Server Error
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '504':
+            description: Gateway Timeout
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+        # security:
+        #   - bearerAuth: []                                        
+  /list_positions:
+    get:
+        tags:
+          - "list positions"
+        summary: "list positions"
+        description: ""
+        produces:
+          - "application/json"
+        responses:
+          '200':
+            description: 200 response
+            # schema:
+            #   $ref: '#/definitions/CardListJson'
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '400':
+            description: Bad Request
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '401':
+            description: Unauthorized
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '403':
+            description: Forbidden
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '404':
+            description: Not Found
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '429':
+            description: Too Many Requests
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '500':
+            description: Internal Server Error
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '504':
+            description: Gateway Timeout
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+        # security:
+        #   - bearerAuth: []                                              
+  /list_booking:
+    get:
+        tags:
+          - "list booking"
+        summary: "list booking"
+        description: ""
+        produces:
+          - "application/json"
+        responses:
+          '200':
+            description: 200 response
+            # schema:
+            #   $ref: '#/definitions/CardListJson'
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '400':
+            description: Bad Request
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '401':
+            description: Unauthorized
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '403':
+            description: Forbidden
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '404':
+            description: Not Found
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '429':
+            description: Too Many Requests
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '500':
+            description: Internal Server Error
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '504':
+            description: Gateway Timeout
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+        # security:
+        #   - bearerAuth: []                                                      
+  /test_upload:
+    get:
+        tags:
+          - "test upload"
+        summary: "test upload"
+        description: ""
+        produces:
+          - "application/json"
+        responses:
+          '200':
+            description: 200 response
+            # schema:
+            #   $ref: '#/definitions/CardListJson'
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '400':
+            description: Bad Request
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '401':
+            description: Unauthorized
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '403':
+            description: Forbidden
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '404':
+            description: Not Found
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '429':
+            description: Too Many Requests
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '500':
+            description: Internal Server Error
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+          '504':
+            description: Gateway Timeout
+            headers:
+              Access-Control-Allow-Origin:
+                type: string
+        # security:
+        #   - bearerAuth: []                                                              
+            
+# definitions:
+#   CardListJson:
+#     type: object
+#     properties:
+#       total:
+#         type: integer
+#         format: int32
+#       lastRowVer:
+#         type: integer
+#         format: int64
+#       data:
+#         type: array
+#         items:
+#           type: object
+#           additionalProperties:
+#             $ref: '#/definitions/Object'
+#   Object:
+#     type: object

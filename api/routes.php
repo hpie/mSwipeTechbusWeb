@@ -806,8 +806,8 @@ $app->get('/list_booking', function() {
 
 	$query = "select * from ticket_booking order by row_id DESC";
 
-	$result = $conn->query($query);
-
+	$result = $conn->query($query);                       
+        
 	while ($row = $result->fetch_assoc()){
 	$data[] = $row;
 	}
