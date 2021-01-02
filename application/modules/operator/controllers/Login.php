@@ -9,7 +9,7 @@ class Login extends MY_Controller {
 	 * Login page and submission
 	 */
 	public function index()
-	{
+	{            
 		$this->load->library('form_builder');
 		$form = $this->form_builder->create_form();
 

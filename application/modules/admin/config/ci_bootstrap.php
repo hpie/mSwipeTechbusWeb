@@ -240,6 +240,8 @@ $config['ci_bootstrap'] = array(
                 'Todays Collection'	=> 'Reports/CollectionToday',
 
                 'Collections'		=> 'Reports/Collection',
+                
+//                'Graph'		=> 'Reports/CollectionTodayGraph',
 
             )
 
